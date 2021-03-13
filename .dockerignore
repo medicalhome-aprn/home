@@ -1,0 +1,11 @@
+*
+!cmd/
+!pkg/
+!python/
+!demo/
+!releng/
+!ambex
+!watt
+!kubestatus
+!envoy-bin/
+envoy-bin/*-static
