@@ -1,0 +1,9 @@
+semantic_version
+gitpython
+docopt
+awscli
+pytest
+pytest-cov
+dpath
+mypy
+pexpect
