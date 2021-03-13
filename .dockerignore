@@ -1,0 +1,7 @@
+*
+!multi/
+!ambassador/
+!demo/
+!releng/
+!watt
+!envoy-bin/
