@@ -1,0 +1,41 @@
+# Created by ./configure
+BUILD
+!/BUILD
+!/build-aux-local/BUILD
+!/python/BUILD
+/vendor/
+
+# "main"
+/tools/sandbox/grpc_auth/docker-compose.yml
+/tools/sandbox/grpc_web/docker-compose.yaml
+/tools/sandbox/grpc_web/*_pb.js
+/tools/sandbox/http_auth/docker-compose.yml
+node_modules/
+venv/
+
+# Bazel nonsense
+bazel-*
+
+# Python nonsense
+*.pyc
+__pycache__/
+*.egg-info
+build/
+dist/
+.mypy_cache/
+
+# Editor nonsense
+*~
+*.swp
+#*#
+.#*
+.vscode
+.idea
+*.iml
+tags
+
+# Misc nonsense
+*.log
+*.tmp
+.tmp*
+*.bak
