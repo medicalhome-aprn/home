@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "https://getambassador.io/schemas/mapping.json",
+    "type": "object",
+    "properties": {
+        "apiVersion": { "enum": ["ambassador/v1"] },
+        "kind": { "type": "string" },
+        "name": { "type": "string" },
+        "ambassador_id": {
+            "anyOf": [
+                { "type": "string" },
+                { "type": "array", "items": { "type": "string" } }
+            ]
+        },
+        "auth_service": { "type": "string" },
+        "path_prefix": { "type": "string" },
+        "tls": { "type": [ "string", "boolean" ] },
+        "proto": {
+            "oneOf" : [
+                { "enum": [ "http" ] },
+                { "enum": [ "grpc" ] }
+            ]
+        },
+        "timeout_ms": { "type": "integer" },
+        "allowed_request_headers": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "allowed_authorization_headers": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "allow_request_body": { "type": "boolean" },
+        "include_body": {
+            "type": "object",
+            "properties": {
+                "max_bytes": { "type": "integer" },
+                "allow_partial": { "type": "boolean" }
+            },
+            "required": [ "max_bytes", "allow_partial" ],
+            "additionalProperties": false
+        }
+    },
+    "required": [ "apiVersion", "kind", "name", "auth_service" ],
+    "additionalProperties": false
+}
